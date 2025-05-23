@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PumpWindow</class>
+ <widget class="QMainWindow" name="PumpWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Insulin Pump</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="screenStack">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="homeButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>128</width>
+        <height>64</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>839</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuControls">
+    <property name="title">
+     <string>Controls</string>
+    </property>
+    <addaction name="actionPowerOn"/>
+    <addaction name="actionPowerOff"/>
+    <addaction name="actionCharge_to_100"/>
+    <addaction name="actionRefill_Insulin"/>
+   </widget>
+   <widget class="QMenu" name="menuSim">
+    <property name="title">
+     <string>Simulation</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuSim"/>
+   <addaction name="menuControls"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionStart">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionResume">
+   <property name="text">
+    <string>Resume</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionPowerOn">
+   <property name="text">
+    <string>Power On</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCGM">
+   <property name="text">
+    <string>CGM</string>
+   </property>
+  </action>
+  <action name="actionErrors">
+   <property name="text">
+    <string>Errors</string>
+   </property>
+  </action>
+  <action name="actionConfig">
+   <property name="text">
+    <string>Config</string>
+   </property>
+  </action>
+  <action name="actionLockScreen">
+   <property name="text">
+    <string>Lock</string>
+   </property>
+  </action>
+  <action name="actionHomeScreen">
+   <property name="text">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionProfiles">
+   <property name="text">
+    <string>Profiles</string>
+   </property>
+  </action>
+  <action name="actionPowerOff">
+   <property name="text">
+    <string>Power Off</string>
+   </property>
+  </action>
+  <action name="actionAdd_Meal_Event">
+   <property name="text">
+    <string>Add Meal Event</string>
+   </property>
+  </action>
+  <action name="actionCharge_to_100">
+   <property name="text">
+    <string>Charge to 100</string>
+   </property>
+  </action>
+  <action name="actionRefill_Insulin">
+   <property name="text">
+    <string>Refill Insulin</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>PumpWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>627</x>
+     <y>437</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCharge_to_100</sender>
+   <signal>triggered()</signal>
+   <receiver>PumpWindow</receiver>
+   <slot>onBatteryCharged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>419</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRefill_Insulin</sender>
+   <signal>triggered()</signal>
+   <receiver>PumpWindow</receiver>
+   <slot>onRefillInsulin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>419</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onOpenConfigActionTriggered()</slot>
+  <slot>onBatteryCharged()</slot>
+  <slot>onRefillInsulin()</slot>
+ </slots>
+</ui>

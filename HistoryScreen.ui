@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistoryScreen</class>
+ <widget class="QWidget" name="HistoryScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QComboBox" name="dataOptionsComboBox">
+     <item>
+      <property name="text">
+       <string>CGM Readings</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Insulin Delivery Event</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Alert/Error History</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="dataTable">
+     <column>
+      <property name="text">
+       <string>Event Type</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Details</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Timestamp</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

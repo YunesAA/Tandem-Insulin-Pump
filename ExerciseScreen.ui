@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExerciseScreen</class>
+ <widget class="QWidget" name="ExerciseScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>Light Workout</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Medium Workout</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Intense Workout</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTimeEdit" name="endTime"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>End</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTimeEdit" name="startTime"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addWorkout">
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>addWorkout</sender>
+   <signal>clicked()</signal>
+   <receiver>ExerciseScreen</receiver>
+   <slot>newExerciseSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>newExerciseSlot()</slot>
+ </slots>
+</ui>

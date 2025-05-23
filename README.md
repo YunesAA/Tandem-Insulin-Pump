@@ -1,7 +1,5 @@
 # COMP3004 Final Project: Tandem Insulin Pump
 
-DEMO: https://youtu.be/z6TJOlCD8Y8
-
 This project models the interaction flow of a t:slim X2 insulin pump with Control-IQ technology and a CGM sensor, using PlantUML sequence diagrams. It covers real-world scenarios like meal-time bolus delivery, insulin on board (IOB) adjustments, extended bolus options, and glucose trend monitoring. The diagram is based on clinical logic using insulin-to-carb ratios, correction factors, and safety checks for effective diabetes management.
 
 **Team members:**
